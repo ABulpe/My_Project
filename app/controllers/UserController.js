@@ -39,7 +39,7 @@ const remove = (req,res) =>{
 const find = (req,res,next) =>{
     
     let query = {};
-    query[req.params.key] = req,params.value;
+    query[req.params.key] = req.params.value;
     User.find(query).then(users => {
         if(!users.length) return next();
         req.body.user = users;

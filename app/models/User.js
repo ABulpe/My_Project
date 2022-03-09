@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-
 const ProductSchema = new mongoose.Schema({
     
     nickname: 
@@ -42,3 +41,6 @@ const ProductSchema = new mongoose.Schema({
     }
 
 })
+
+const User = mongoose.model('User',ProductSchema);
+module.exports = User;
